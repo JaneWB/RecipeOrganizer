@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using RecipeOrganizer.Models;
 
 namespace RecipeOrganizer.Data
 {
@@ -12,5 +13,6 @@ namespace RecipeOrganizer.Data
             : base(options)
         {
         }
+        public DbSet<RecipeOrganizer.Models.Recipe> Recipe { get; set; }
     }
 }
